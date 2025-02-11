@@ -1,12 +1,14 @@
 ## About
 
-Spring MVC + Spring HATEOAS app with HAL representations of each resource
+Spring MVC + Spring HATEOAS app with [HAL](https://stateless.co/hal_specification.html) representations of each resource
 
 REST app where a field is evolved but old data is retained for backward compatibility
 
 REST app where conditional links are used to signal valid state changes to clients
 
 To view more examples of using Spring HATEOAS, see https://github.com/spring-projects/spring-hateoas-examples.
+
+More about HAL see https://datatracker.ietf.org/doc/html/draft-kelly-json-hal-08
 
 ## Run The Application
 
@@ -41,3 +43,7 @@ curl -v http://localhost:8080/orders | json_pp
 curl -v -X DELETE http://localhost:8080/orders/{id}/cancel | json_pp
 
 curl -v -X PUT localhost:8080/orders/{id}/complete | json_pp
+
+## Other Useful Links
+
+- RFC-7807 https://datatracker.ietf.org/doc/html/rfc7807
