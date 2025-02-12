@@ -1,4 +1,4 @@
-package payroll;
+package payroll.order;
 
 class OrderNotFoundException extends RuntimeException {
 

@@ -1,4 +1,4 @@
-package payroll;
+package payroll.order;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,6 +20,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import payroll.entities.Order;
+
 @RestController
 public class OrderController {
 
@@ -33,7 +35,7 @@ public class OrderController {
     }
 
     @GetMapping("/orders")
-    CollectionModel<EntityModel<Order>> all() {
+    public CollectionModel<EntityModel<Order>> all() {
 
         List<EntityModel<Order>> orders = orderRepository.findAll().stream() //
                 .map(assembler::toModel) //

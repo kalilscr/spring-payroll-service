@@ -1,4 +1,4 @@
-package payroll;
+package payroll.employee;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
@@ -17,8 +17,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import payroll.entities.Employee;
+
 @RestController
-class EmployeeController {
+public class EmployeeController {
 
     private final EmployeeRepository repository;
 
@@ -32,7 +34,7 @@ class EmployeeController {
     // Aggregate root
     // tag::get-aggregate-root[]
     @GetMapping("/employees")
-    CollectionModel<EntityModel<Employee>> all() {
+    public CollectionModel<EntityModel<Employee>> all() {
 
         List<EntityModel<Employee>> employees = repository.findAll().stream()
                 .map(assembler::toModel)

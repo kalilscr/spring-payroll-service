@@ -6,6 +6,13 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import payroll.entities.Order;
+import payroll.order.OrderRepository;
+import payroll.order.Status;
+
+import payroll.entities.Employee;
+import payroll.employee.EmployeeRepository;
+
 @Configuration
 class LoadDatabase {
 

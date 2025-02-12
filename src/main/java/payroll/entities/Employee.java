@@ -1,4 +1,4 @@
-package payroll;
+package payroll.entities;
 
 import java.util.Objects;
 
@@ -7,7 +7,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
-class Employee {
+public class Employee {
 
     private @Id @GeneratedValue Long id;
     private String firstName;
@@ -17,7 +17,7 @@ class Employee {
     Employee() {
     }
 
-    Employee(String firstName, String lastName, String role) {
+    public Employee(String firstName, String lastName, String role) {
 
         this.firstName = firstName;
         this.lastName = lastName;

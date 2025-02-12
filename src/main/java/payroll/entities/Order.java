@@ -1,4 +1,4 @@
-package payroll;
+package payroll.entities;
 
 import java.util.Objects;
 
@@ -6,10 +6,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import payroll.order.Status;
 
 @Entity
 @Table(name = "CUSTOMER_ORDER")
-class Order {
+public class Order {
 
     private @Id @GeneratedValue Long id;
 
@@ -19,7 +20,7 @@ class Order {
     Order() {
     }
 
-    Order(String description, Status status) {
+    public Order(String description, Status status) {
 
         this.description = description;
         this.status = status;
